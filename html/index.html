@@ -33,34 +33,6 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="/js/bootstrap"></script>
-
-        $(document).ready(function() {
-        $("#btn_newsletter").click(function(){
-            var email = $("#email").val();
-            $.ajax({
-            type: "POST",
-            url: "ajax/ins_newsletter.php",
-            data: "email=" + email ,
-            dataType: "html",
-            success: function(msg)
-            {
-                if (msg.indexOf("error") == -1) {
-                    $("#div_newsletter").html(msg);
-                } else {
-                    tmp = msg.split("#");
-                    $("#div_newsletter").html(tmp[1]);					
-                }
-            },
-            error: function()
-            {
-                alert("Chiamata fallita, si prega di riprovare...");
-            }
-            });
-        });
-        
-        
-        });
-    </script>
 </head>
 
 <body>
@@ -132,17 +104,14 @@
                         <li class="">
                             <a href="suggerimenti.html" >Your suggestions</a>
                         </li>
-                        <!--<li class="">
-                            <a href="/ricette.php">Recepies</a>
-                        </li>-->
-                                                <li class="">
+                            <li class="">
                                 <a href="area_agenti.html">Customer area</a>
                             </li>
                                             <li class="">
                             <a href="contatti.html">Contact us</a>
                         </li>
                         <li><a href="https://www.facebook.com/farneseinformatica/" target="_blank" title="Seguiteci su Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-                        <li><a href="https://www.instagram.com/santoro_conserve/?hl=it" target="_blank" title="Seguiteci su Instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
+                        <li><a href="https://www.instagram.com/farneseinformatica/" target="_blank" title="Seguiteci su Instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -153,41 +122,26 @@
         <!-- Header Carousel -->
         <!--area slide top home page-->
 
-    <header id="myCarousel" class="carousel slide">
+        <header id="myCarousel" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-                                <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-                                <li data-target="#myCarousel" data-slide-to="4" class=""></li>
-                                <li data-target="#myCarousel" data-slide-to="5" class=""></li>
-                    </ol>
-
+                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="4" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="5" class=""></li>
+            </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                            <div class="item active">
-                                                <a href="http://shop.sicilygold.it">
-                                <div class="fill" style="background-image:url('upload/slideshow/15.jpg');"></div>
-                            </a>
-                                    </div>
-                            <div class="item ">
-                                                <div class="fill" style="background-image:url('upload/slideshow/16.jpg');"></div>
-                                    </div>
-                            <div class="item ">
-                                                <div class="fill" style="background-image:url('upload/slideshow/20.jpg');"></div>
-                                    </div>
-                            <div class="item ">
-                                                <div class="fill" style="background-image:url('upload/slideshow/22.jpg');"></div>
-                                    </div>
-                            <div class="item ">
-                                                <div class="fill" style="background-image:url('upload/slideshow/21.jpg');"></div>
-                                    </div>
-                            <div class="item ">
-                                                <div class="fill" style="background-image:url('upload/slideshow/23.jpg');"></div>
-                                    </div>
+                <lnxmcp type="block" name="slide" module="SicilyGold"  >
+                    <div class="item ">
+                        <a href="http://shop.sicilygold.it/{link}">
+                            <div class="fill" style="background-image:url('http://shop.sicilygold.it/{image}');"></div>
+                        </a>
                     </div>
-
+                </lnxmcp>
+            </div>
             <!-- Controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                 <span class="icon-prev"></span>
