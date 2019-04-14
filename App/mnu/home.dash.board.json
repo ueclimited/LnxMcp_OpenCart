@@ -1,0 +1,10 @@
+{
+    "forum":{
+        "type":"extFile",
+        "path":"html/",
+        "name":"home.html"
+    },
+    "bye":{
+        "type":"exit"
+    }
+}

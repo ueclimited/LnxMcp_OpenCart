@@ -1,0 +1,5 @@
+{
+    "E":"opencart",
+    "T":"q",
+    "Q":" select * from oc_category as c, oc_category_description as d where c.category_id = d.category_id and d.language_id=2"
+}

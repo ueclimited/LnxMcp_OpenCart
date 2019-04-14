@@ -1,0 +1,15 @@
+{
+    "head":{
+        "type":"header",
+        "header":"content-type: text/javascript;"
+    },
+    "forum":{
+        "type":"extFile",
+        "path":"/App/js/",
+        "name":"bootstrap",
+        "ext":"js"
+    },
+    "bye":{
+        "type":"exit"
+    }
+}

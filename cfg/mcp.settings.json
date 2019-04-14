@@ -1,0 +1,49 @@
+{
+    "app.def":"testoc",
+    "app.level":0,
+    "app.debug":true,
+    "app.title-old":"LnxMcp - Test OpenCart",
+    "app.title":"Sicily Gold",
+    "app.copyright":"Unix European Company - 2019 (based on lnxmcp , ln4 and Materialize)",
+    "app.logourl":"/ueclogo2.jpeg",
+    "app.topmenu":{
+        "About":{
+            "LnxMcp Project":"https://github.com/linhunix/lnxmcp/wiki",
+            "U.E.C.ltd":"http://unix.eu.com",
+            "LinHUniX.ltd":"http://LinHUniX.com"
+        }
+    },
+    "app.menu.InitCommon":{
+        "gfx":{
+            "type":"serviceCommon",
+            "module":"Gfx"
+        },
+        "mail":{
+            "type":"serviceCommon",
+            "module":"Mail"
+        },
+        "pdo":{
+            "type":"serviceCommon",
+            "module":"Pdo",
+            "input": {
+                "ENV":{
+                    "cachedb":{
+                        "driver":"sqlite",
+                        "config":"SCOPE",
+                        "path":"/../work/",
+                        "database":"cache.db"
+                    },
+                    "opencart":{
+                        "driver":"mysql",
+                        "config":"SCOPE",
+                        "username":"testoc",
+                        "password":"testoc",
+                        "hostname":"127.0.0.1",
+                        "database":"testoc"
+                    }
+                }
+            }
+        }
+    },
+    "app.gfx.default":["Base","BsMat"]
+}

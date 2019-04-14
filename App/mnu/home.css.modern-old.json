@@ -1,0 +1,16 @@
+{
+   "css":{
+            "type": "serviceCommon",
+            "name": "gfx",
+            "module": "Gfx",
+            "isPreload": false,
+            "ScopeInRewrite": {
+                "source": "/../.../../../App/css/modern.css",
+                "mimetype": "text/css",
+                "T": "INT"
+            }    
+    },
+    "bye":{
+        "type":"exit"
+    }
+}

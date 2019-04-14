@@ -1,0 +1,11 @@
+{
+    "query":{
+        "type":"queryJson",
+        "name":"listCategoryDefLangita",
+        "module":"OpenCart",
+        "vendor":"UEC"
+    },
+    "categories":{
+        "type":"javascript"
+    }
+}

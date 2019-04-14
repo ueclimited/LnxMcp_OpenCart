@@ -1,0 +1,11 @@
+{
+    "forum":{
+        "type":"extTemplate",
+        "path":"html/",
+        "name":"index",
+        "ext":"html"
+    },
+    "bye":{
+        "type":"exit"
+    }
+}

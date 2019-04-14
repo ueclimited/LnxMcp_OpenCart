@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Prodotti tipici di Sicilia, Pesti, sughi e specialita' siciliane" /> 
+    <meta name="description" content="SicilyGold, a Bronte, nella zona Etnea ti offre il meglio dei prodotti alimentari della tradizione siciliana">
+    <meta name="author" content="farneseinformatica.it">
+
+    <title>SicilyGold</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet"> 
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	  $("#btn_newsletter").click(function(){
+		var email = $("#email").val();
+		$.ajax({
+		  type: "POST",
+		  url: "ajax/ins_newsletter.php",
+		  data: "email=" + email ,
+		  dataType: "html",
+		  success: function(msg)
+		  {
+			if (msg.indexOf("error") == -1) {
+				$("#div_newsletter").html(msg);
+			} else {
+				tmp = msg.split("#");
+				$("#div_newsletter").html(tmp[1]);					
+			}
+		  },
+		  error: function()
+		  {
+			alert("Collegamento fallito, si prega di riprovare...");
+		  }
+		});
+	  });
+	  
+	  
+	});
+</script>
+</head>
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Navigation -->
+    <!--area top navigation-->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index-2.html"><img src="images/logo.png" alt="SicilyGold" usemap="#Map" class="img-responsive" title="SicilyGold" border="0">
+                <map name="Map" id="Map">
+                  <area shape="rect" coords="65,75,113,111" href="indexc1f2.html?Lingua=it" title="Italiano" />
+                  <area shape="rect" coords="124,74,176,110" href="index344e.html?Lingua=en" title="Inglese" />
+                </map>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top:20px;">
+                <ul class="nav navbar-nav navbar-right" style="font-family:'EB Garamond', serif; font-size:18px;">
+                    <li class="active">
+                        <a href="index-2.html">Home</a>
+                    </li>
+                    
+					                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >L'Azienda <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                                                    <li> 
+                                        <a href="L%27Azienda-3-3/L-Azienda.html" >L'Azienda</a>
+                                    </li>
+                                                                    <li> 
+                                        <a href="L%27Azienda-5-3/Certificazioni.html" >Certificazioni</a>
+                                    </li>
+                                                                    <li> 
+                                        <a href="L%27Azienda-6-3/Cookie-policy.html" >Cookie policy</a>
+                                    </li>
+                                                            </ul>
+                          </li>
+                    
+                    <li class="dropdown ">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Catalogo<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        	                                    <li>
+                                        <a href="articoli/374/sughi-siciliani.html">
+                                        	<b>Sughi Siciliani</b>
+                                        </a>
+                                    </li>
+                                                               <li>
+                                        <a href="articoli/375/pesti-siciliani.html">
+                                        	<b>Pesti Siciliani</b>
+                                        </a>
+                                    </li>
+                                                               <li>
+                                        <a href="articoli/376/pat%c3%a8-siciliani.html">
+                                        	<b>Patè Siciliani</b>
+                                        </a>
+                                    </li>
+                                                               <li>
+                                        <a href="articoli/378/bruschetta.html">
+                                        	<b>Ristorazione</b>
+                                        </a>
+                                    </li>
+                                                               <li>
+                                        <a href="articoli/379/Docliaria.html">
+                                        	<b>Dolciaria</b>
+                                        </a>
+                                    </li>
+                                                      <li><a href="articoli/vegani.html"><b>Prodotti per vegani</b></a>
+                      </ul>
+                    </li>
+                    
+                    <li class="">
+                        <a href="Contatti.html" >Contattaci</a>
+                    </li>
+                    <!--<li class="">
+                        <a href="/ricette.php">Ricette</a>
+                    </li>-->
+                                            <li class="">
+                            <a href="area_riservata.html">Area Riservata</a>
+                        </li>
+                                        <li class="">
+                        <a href="contatti.html">Contatti</a>
+                    </li>
+                    <li><a href="https://www.facebook.com/farneseinformatica" target="_blank" title="Seguiteci su Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=it" target="_blank" title="Seguiteci su Instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>     <!-- /Navigation -->
+
+    <!-- Header Carousel -->
+    <!--area slide top home page-->
+
+<header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+			                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                              <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                              <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                              <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                              <li data-target="#myCarousel" data-slide-to="4" class=""></li>
+                              <li data-target="#myCarousel" data-slide-to="5" class=""></li>
+                  </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+    	                <div class="item active">
+                	                        <a href="http://shop.sicilygold.it">
+	                        <div class="fill" style="background-image:url('upload/slideshow/15.jpg');"></div>
+                        </a>
+                                   </div>
+                        <div class="item ">
+                	                        <div class="fill" style="background-image:url('upload/slideshow/16.jpg');"></div>
+                                   </div>
+                        <div class="item ">
+                	                        <div class="fill" style="background-image:url('upload/slideshow/20.jpg');"></div>
+                                   </div>
+                        <div class="item ">
+                	                        <div class="fill" style="background-image:url('upload/slideshow/22.jpg');"></div>
+                                   </div>
+                        <div class="item ">
+                	                        <div class="fill" style="background-image:url('upload/slideshow/21.jpg');"></div>
+                                   </div>
+                        <div class="item ">
+                	                        <div class="fill" style="background-image:url('upload/slideshow/23.jpg');"></div>
+                                   </div>
+                </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>       <!--/ Header Carousel -->
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header" style="font-family: 'La Belle Aurore', cursive;" align="center">
+                    Orgogliosamente Siciliani                </h1>
+                <p style="font-size:16px;"><b>La nostra Azienda</b> nasce dalla passione per le tradizioni culinarie della <b>Sicilia</b> alla riscoperta dei profumi e sapori di un territorio generoso e di un popolo antico.
+				  Un viaggio di piacere nella millenaria cultura gastronomica Siciliana, attraverso mari, monti, culture e sapori. <b>La Santoro Conserve Alimentari</b> offre sempre prodotti realizzati con procedimenti di chi ha sempre fatto in casa le proprie conserve.</p></div>
+<!--            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.2.0</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+-->        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header" style="font-family: 'La Belle Aurore', cursive;">Linee prodotti</h2>
+            </div>
+            <div class="col-md-4 col-sm-6" >
+                <a href="articoli/374/sughi-siciliani.html">
+                    <img class="img-responsive img-portfolio img-hover" src="images/sughi_it.jpg" alt="" style="-webkit-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6" >
+                <a href="articoli/375/pesti-siciliani.html">
+                    <img class="img-responsive img-portfolio img-hover" src="images/pesti_it.jpg" alt="" style="-webkit-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="articoli/376/pat%c3%a8-siciliani.html">
+                    <img class="img-responsive img-portfolio img-hover" src="images/pate_it.jpg" alt="" style="-webkit-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);">
+                </a>
+            </div>
+          <div class="col-md-4 col-sm-6">
+                <a href="articoli/378/condigusta.html">
+                    <img class="img-responsive img-portfolio img-hover" src="images/condigusta_it.jpg" alt="" style="-webkit-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);">
+                </a>
+            </div>
+          <div class="col-md-4 col-sm-6">
+                <a href="#">
+                    <img class="img-responsive img-portfolio img-hover" src="images/gourmet_it.jpg" alt="" style="-webkit-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);">
+                </a>
+            </div>
+               <div class="col-md-4 col-sm-6">
+                <a href="articoli/vegani.html">
+                    <img class="img-responsive img-portfolio img-hover" src="images/vegano_it.jpg" alt="" style="-webkit-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);">
+                </a>
+            </div>
+<!--            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+-->        </div>
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        <!--<div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header" style="font-family:'Dancing Script', cursive;">Il nostro Catalogo</h2>
+            </div>
+            <div class="col-md-6">
+              <p style="font-size:16px;">Una completa linea di <b>sughi pronti</b>, rielaborati su ricettazioni tradizionali, densi di <b>profumi mediterranei.</b> Mare e Montagna nel cuore di ogni prodotto.<br>
+                    Raffinati profumi e ricchezza nel gusto sono gli ingredienti comuni nella linea dei nostri <b>pesti</b>.                    
+                    Tradizione e innovazione per soddisfare <b>i palati più esigenti</b>.<br>
+                    Stuzzicanti ed unici nei sapori, da spalmarsi su crostini o per guarnire con gusto formaggi, carni e altre pietanze.<br>
+              </p>
+            </div>
+            <div class="col-md-6">
+            	<a href="catalogo.pdf" target="_blank">
+	                <img class="img-responsive" src="images/cat-home_it.png" alt="Catalogo Santoro Conserve" title="Catalogo Santoro Conserve">
+                </a>
+            </div>
+        </div>-->
+        <!-- /.row -->
+
+        <hr>
+
+
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header" style="font-family: 'La Belle Aurore', cursive;">Santoro social</h2>
+            </div>
+            <div class="col-md-6" align="center" style="margin-bottom:20px;">
+<div class="fb-page" data-href="https://www.facebook.com/Santoro-Conserve-Alimentari-1547523182132809/?fref=ts" data-tabs="timeline" data-height="930" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>              </p>
+            </div>
+            <div class="col-md-6">
+                            <h2 class="page-header" style="font-family: 'La Belle Aurore', cursive;">Il nostro Catalogo</h2>
+
+            <p style="font-size:16px;">Una completa linea di <b>sughi pronti</b>, rielaborati su ricettazioni tradizionali, densi di <b>profumi mediterranei.</b> Mare e Montagna nel cuore di ogni prodotto.<br>
+                    Raffinati profumi e ricchezza nel gusto sono gli ingredienti comuni nella linea dei nostri <b>pesti</b>.                    
+                    Tradizione e innovazione per soddisfare <b>i palati più esigenti</b>.<br>
+                    Stuzzicanti ed unici nei sapori, da spalmarsi su crostini o per guarnire con gusto formaggi, carni e altre pietanze.</p><br>
+            <br>
+            <a href="brochure_web.pdf" target="_blank">
+	                <img class="img-responsive" src="images/cat-home_it.png" alt="Catalogo Santoro Conserve" title="Catalogo Santoro Conserve">
+                </a>
+            </div>
+            <!--<div class="col-md-6">
+               <p style="font-size:16px;">Benvenuto nel mondo delle ricette Santoro Conserve! Ce n’è per tutte i gusti, Scopri tutte le ricette della cucina regionale Siciliana e Nazionale.<br>
+                <a href="/ricette.php">
+                <img src="images/ricette-home_it.jpg" alt=""  class="img-responsive" style="-webkit-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);">
+                </a>
+               </p>
+                <p style="font-size:16px;">
+                    <a href="/ricette.php">
+                        <img src="images/ingredienti_it.jpg" alt=""  class="img-responsive" style="-webkit-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);
+box-shadow: 0px 0px 10px 0px rgba(163,163,163,1);">
+                    </a>
+                </p>
+          </div>-->
+        </div>
+        <!-- /.row -->
+
+    <hr>
+    
+    <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header" style="font-family: 'La Belle Aurore', cursive;"><a href="L%27Azienda-5-3/Certificazioni.html">Certificazioni</a></h2>
+            </div>
+           <!-- <div class="col-md-4 col-sm-6" align="center">
+               
+                    <img class="img-responsive img-portfolio img-hover" src="images/ivegan.jpg" alt="iVegan" title="iVegan">
+                
+            </div>-->
+            <div class="col-md-6 col-sm-6" align="center">
+                
+                    <img class="img-responsive img-portfolio img-hover" src="images/ifs.jpg" alt="IFS Food" title="IFS Food">
+                
+            </div>
+      <div class="col-md-6 col-sm-6" align="center">
+                
+                    <img class="img-responsive img-portfolio img-hover" src="images/brc.jpg" alt="BRC FOOD CERTIFICATED" title="BRC FOOD CERTIFICATED">
+                
+            </div>
+   
+      </div>
+        
+        <hr>
+
+        <!-- Call to Action Section -->
+        <form>
+        <div class="well" style="margin-top:40px;">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Iscriviti alla nostra newsletter per ricevere notizia dal mondo Santoro Conserve </p>
+                    <input type="email" placeholder="inserisci la tua e-mail" class="form-control" id="email" name="email" style="margin-bottom:10px;">
+                    <div id="div_newsletter"></div>
+                </div>
+                <div class="col-md-4">
+					<a class="btn btn-lg btn-default btn-block" id="btn_newsletter"><i class="fa fa-paper-plane-o fa-2x"></i>&nbsp;Iscriviti alla Newsletter</a>
+                </div>
+            </div>
+        </div>
+		</form>
+        <hr>
+
+        <!-- Footer -->
+       <!--area -->
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p align="center">©  2015 SANTORO CONSERVE ALIMENTARI | C.da Boscamento sn Rovittello - 95012 Castiglione di Sicilia | P.I. 03740880871 | 
+                    Seguiteci su &nbsp;<a href="https://www.facebook.com/Santoro-Conserve-Alimentari-1547523182132809/" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a> <a href="https://www.instagram.com/santoro_conserve/?hl=it" target="_blank"><i class="fa fa-instagram fa-2x"></i></a> </p>
+                </div>
+            </div>
+        </footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101273634-1', 'auto');
+  ga('send', 'pageview');
+
+</script>               <!--/ Footer -->
+
+    </div>
+    <!-- /.container -->
+
+<div class="col-md-12" style="background-image:url(images/bg-footer.jpg);height:54px;"></div>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+    
+     <script src="cookiechoices.js"></script>
+<script>//<![CDATA[
+document.addEventListener('DOMContentLoaded', function(event) {
+    cookieChoices.showCookieConsentBar('Questo sito utilizza i cookie per migliorare servizi e esperienza dei lettori. Se decidi di continuare la navigazione consideriamo che accetti il loro uso.',
+        'x Chiudi', 'Maggiori Informazioni',
+                 'LAzienda-6-3/Cookie-policy.html');
+  });
+//]]></script>
+
+</body>
+
+
+<!-- Mirrored from www.santoroconserve.it/index.php?Lingua=it by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2019 12:14:59 GMT -->
+</html>

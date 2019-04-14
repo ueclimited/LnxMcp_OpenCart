@@ -1,0 +1,15 @@
+{
+	"head": {
+		"type": "header",
+		"header": "content-type: image/jpeg;"
+	},
+	"image": {
+		"type": "extFile",
+		"path": "/App/img/",
+		"name": "logo",
+		"ext": "jpg"
+	},
+	"bye": {
+		"type": "exit"
+	}
+}

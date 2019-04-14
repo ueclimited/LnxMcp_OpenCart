@@ -1,0 +1,15 @@
+{
+    "head":{
+        "type":"header",
+        "header":"content-type: text/css;"
+    },
+    "forum":{
+        "type":"extFile",
+        "path":"/App/css/",
+        "name":"modern",
+        "ext":"css"
+    },
+    "bye":{
+        "type":"exit"
+    }
+}

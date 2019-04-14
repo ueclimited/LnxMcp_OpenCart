@@ -1,0 +1,5 @@
+{
+    "E":"opencart",
+    "T":"q",
+    "Q":"select * from oc_product as p , oc_product_description as d where p.product_id=d.product_id and d.language_id=2"
+}

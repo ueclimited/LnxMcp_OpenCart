@@ -1,0 +1,15 @@
+{
+    "head":{
+        "type":"header",
+        "header":"content-type: text/css;"
+    },
+    "css":{
+        "type":"extFile",
+        "path":"/App/css/",
+        "name":"bootstrap",
+        "ext":"css"
+    },
+    "bye":{
+        "type":"exit"
+    }
+}

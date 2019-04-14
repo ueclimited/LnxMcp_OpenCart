@@ -1,0 +1,11 @@
+{
+    "query":{
+        "type":"queryJson",
+        "name":"Settings",
+        "module":"OpenCart",
+        "vendor":"UEC"
+    },
+    "settings":{
+        "type":"javascript"
+    }
+}
