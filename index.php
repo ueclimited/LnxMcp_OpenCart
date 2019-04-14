@@ -8,4 +8,5 @@ $lnxmcp_phar=array(
     "app.debug"=>true,
     "mcp.env"=>"TEST"
 );
-require __DIR__ . "/../lnxmcp/mcp/Head.php";
+//require __DIR__ . "/../lnxmcp/mcp/Head.php";
+require __DIR__ . "/mcp/lnxmcp.phar";
